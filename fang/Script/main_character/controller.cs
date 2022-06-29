@@ -187,7 +187,6 @@ public class controller : MonoBehaviour
             Focus_inv.UseItem(focusItemNo);
             //get item player is focusing on 
             Item Focus_item =  Focus_inv.GetItemList()[focusItemNo];
-            
             // no focus item !!!!;
             if(Focus_item == null){
                 return ;

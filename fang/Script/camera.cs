@@ -8,7 +8,7 @@ public class camera : MonoBehaviour
     private void Awake()
     {
         target = GameObject.Find("main_character");
- 
+        Debug.Log(target);
     }
     void LateUpdate() 
     {

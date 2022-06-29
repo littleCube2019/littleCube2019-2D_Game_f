@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c718f29cc4726d42ae1d283ffdb9a33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   maxHp: 100
   Hp: 100
   hpGradient:
@@ -180,6 +181,8 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   hpBarObj: {fileID: 6175184193167244547}
+  hpBar: {fileID: 6175184193167244544}
+  hpFill: {fileID: 6175184193310377317}
 --- !u!1001 &4815993660117086750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -299,3 +302,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1686441903351451421, guid: 36f7325fc8b39a9448c88ffb392f7f53, type: 3}
   m_PrefabInstance: {fileID: 4815993660117086750}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6175184193167244544 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1686441903351451422, guid: 36f7325fc8b39a9448c88ffb392f7f53, type: 3}
+  m_PrefabInstance: {fileID: 4815993660117086750}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6175184193167244547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6175184193310377317 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1686441903476750203, guid: 36f7325fc8b39a9448c88ffb392f7f53, type: 3}
+  m_PrefabInstance: {fileID: 4815993660117086750}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
