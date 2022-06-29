@@ -36,6 +36,7 @@ public class UI_Player : MonoBehaviour
 
         headEquipmentInventory = new Inventory(1, headEquipmentInventory_UI);
         headEquipmentInventory_UI.SetInventory(headEquipmentInventory);
+//        handEquipmentInventory.SetLimits(new List<Item.ItemType> { Item.ItemType.wizardHat});
         headEquipmentInventory_UI.CreateSlot(1, 1);
 
         handEquipmentInventory = new Inventory(1, handEquipmentInventory_UI);

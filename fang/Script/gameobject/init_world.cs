@@ -32,7 +32,7 @@ public class init_world : MonoBehaviour
         
         // add Event
         /*
-        equipment = player.GetComponent<UI_Player>().equipmentInventory;
+       
         equipment.OnItemListChanged += ChangePlayerValueByEquipement;
         */
     }

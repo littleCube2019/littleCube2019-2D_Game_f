@@ -12,9 +12,21 @@ public class weapon_manager : MonoBehaviour
         spear,
 
     }
+    
 
+    public void getEuipment(){
+        Item[] headItem =  transform.GetComponent<UI_Player>().headEquipmentInventory.GetItemList();
+        
+        if(headItem[0].itemType == Item.ItemType.wizardHat){
+            
+        }
+        
+        //Item[] bodyItem =  transform.GetComponent<UI_Player>().bodyEquipmentInventory.GetItemList();
+        //Item[] handItem =  transform.GetComponent<UI_Player>().handEquipmentInventory.GetItemList();
+        //Item[] legItem =  transform.GetComponent<UI_Player>().legEquipmentInventory.GetItemList();
+    }
 
-      IEnumerator MoveToward(GameObject weapon){
+    IEnumerator MoveToward(GameObject weapon){
         int t = 0;
         
         readWeaponInfo info = weapon.GetComponent<readWeaponInfo>();

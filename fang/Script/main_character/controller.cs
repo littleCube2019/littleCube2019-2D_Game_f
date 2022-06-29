@@ -157,12 +157,15 @@ public class controller : MonoBehaviour
             }
         }
         
-        /*if(Input.GetKeyDown(KeyCode.Space)){ //hit myself
-            GameObject.Find("Enemy").GetComponent<enemy_status>().takeDamage(10);
-        }*/
+        //testing part
+        if(Input.GetKeyDown(KeyCode.Space)){ //hit myself
+            gameObject.GetComponent<status>().takeHeal(2);
+        }
+         if(Input.GetKeyDown(KeyCode.P)){ //hit myself
+            gameObject.GetComponent<status>().setMaxHp(32);
+        }
 
-
-
+        //testing part
         
         if (Input.GetMouseButtonDown(0)){
             Vector2 mousePos ;

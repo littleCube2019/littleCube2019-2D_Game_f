@@ -15,7 +15,7 @@ public class EnemyAI : MonoBehaviour
     float JumpForce = 200f;
     float MaxJumpingHeight = 1.5f;
     int attackCoolDown;
-    int attackDamage = 10;
+    int attackDamage = 1;
     IEnumerator moveCoroutine;
     IEnumerator attackCoroutine;
     // Start is called before the first frame update

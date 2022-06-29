@@ -8,9 +8,14 @@ public class Item
     public int amount;
     public int maxAmount = 10;
     public bool hasInventory;
+
+    // durability
     public int durability;
     public bool isDurability;
     public int decreaseDurabilityPerHit;
+    
+
+
     public enum ItemType
     {
     
@@ -20,7 +25,8 @@ public class Item
         earthElement,
         waterElement,
         fireElement,
-        spear
+        spear,
+        wizardHat
     }
     
    
