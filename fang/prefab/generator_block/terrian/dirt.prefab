@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7521258111601990600}
   - component: {fileID: -7523865851301146972}
   - component: {fileID: 6903828375127760527}
-  - component: {fileID: -4310945816560138302}
+  - component: {fileID: 5014941644200427023}
   m_Layer: 6
   m_Name: dirt
   m_TagString: Untagged
@@ -125,7 +125,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-4310945816560138302
+--- !u!114 &5014941644200427023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

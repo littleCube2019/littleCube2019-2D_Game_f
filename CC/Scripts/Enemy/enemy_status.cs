@@ -11,21 +11,19 @@ public class enemy_status : MonoBehaviour
     [SerializeField] int maxHp = 100 ; 
     [SerializeField] int Hp = 100 ; 
     [SerializeField] Gradient hpGradient ; 
-    public GameObject hpBarObj;
-    [SerializeField] Slider hpBar ; 
+    [SerializeField] GameObject hpBarObj;
+    [SerializeField] private Slider hpBar ; 
     
-    [SerializeField] Image hpFill ; 
+    [SerializeField] private Image hpFill ;
+
 
     public void Awake()
     {
+        //hpBar = hpBarObj.transform.GetComponent<Slider>();
+        //hpFill = hpBarObj.transform.GetChild(0).GetComponent<Image>();
         hpBar.maxValue = maxHp;
         hpBar.value = Hp;
     }
-
-
-
-
-
     public void setMaxHp(int v){
         maxHp = v;
         Hp = v;
@@ -40,34 +38,30 @@ public class enemy_status : MonoBehaviour
         {
             Killed();
         }
-        Debug.Log(hpBar);
         hpBar.value = Hp;
         hpFill.color = hpGradient.Evaluate(hpBar.normalizedValue);
     }
     
-    public void setHp(int v){
-        
-        v = Mathf.Max(v,0);
-        v = Mathf.Min(v,maxHp);
-        
-        hpBar.value = v;
-        hpFill.color = hpGradient.Evaluate(hpBar.normalizedValue);
-    }
-
     public void takeHeal(int v){
         Hp += v;
         Hp = Mathf.Min(Hp , maxHp);
         hpBar.value = Hp;
         hpFill.color = hpGradient.Evaluate(hpBar.normalizedValue);
     }
-
+    public void setHp(int v)
+    {
+        v = Mathf.Max(v, 0);
+        v = Mathf.Min(v, maxHp);
+        hpBar.value = v;
+        hpFill.color = hpGradient.Evaluate(hpBar.normalizedValue);
+    }
 
     
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

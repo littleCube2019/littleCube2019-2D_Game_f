@@ -87,21 +87,7 @@ public class Inventory
         //OnItemListChanged?.Invoke(this, EventArgs.Empty);
         return item;
     }
-    public void UseItem(int index)
-    {
-        
     
-        if (itemList[index] == null || !itemList[index].isDurability)
-        {
-            return;
-        }
-        itemList[index].durability -= itemList[index].decreaseDurabilityPerHit;
-        if (itemList[index].durability <= 0)
-        {
-            RemoveItemAt(index);
-        }
-        OnItemListChanged?.Invoke(this, EventArgs.Empty);
-    }
     public Item AddItemAt(Item item, int index)
     {
         if (limits.Count>0 && !limits.Contains(item.itemType))
@@ -231,5 +217,18 @@ public class Inventory
     public int GetCapacity()
     {
         return capacity;
+    }
+    public void UseItem(int index)
+    {
+        if (itemList[index] == null || !itemList[index].isDurability)
+        {
+            return;
+        }
+        itemList[index].durability -= itemList[index].decreaseDurabilityPerHit;
+        if (itemList[index].durability <= 0)
+        {
+            RemoveItemAt(index);
+        }
+        OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
 }

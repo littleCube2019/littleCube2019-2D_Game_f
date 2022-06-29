@@ -69,10 +69,10 @@ public class UI_inventory : MonoBehaviour
     }
     public void RefreshInventory()
     {
-        
+        Debug.Log("refresh");
         if (itemSlotContainer != null)
         {
-            
+            /*
             foreach (Transform child in itemSlotContainer)
             {
                 if (child == itemSlotTemplate) continue;
@@ -80,25 +80,15 @@ public class UI_inventory : MonoBehaviour
             }
             
             Item[] itemList = inventory.GetItemList();
-            for(int i=0; i<inventory.GetCapacity(); i++)
+            for (int i = 0; i < inventory.GetCapacity(); i++)
             {
                 if (itemList[i] != null)  // i-th itemSlot is not empty
                 {
-
-                   
                     RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
                     itemSlotRectTransform.gameObject.SetActive(true);
-                    
-                    if(itemList[i].isDurability == true){
-                        
-                        itemSlotRectTransform.GetChild(2).gameObject.SetActive(true);
-                        itemSlotRectTransform.GetComponent<enemy_status>().setHp(itemList[i].durability) ;
-                        //a.Start();
-                        
-                    }
-                
-                    
-                    
+
+
+
                     //UI_dragItem.Instance.SetItem(item);
                     itemSlotRectTransform.gameObject.GetComponent<UI_dragItem>().SetItem(itemList[i]);
                     itemSlotRectTransform.gameObject.GetComponent<UI_dragItem>().SetIndex(i);
@@ -107,8 +97,24 @@ public class UI_inventory : MonoBehaviour
                     image.sprite = itemList[i].GetSprite();
                     Text text = itemSlotRectTransform.Find("Text").GetComponent<Text>();
                     text.text = itemList[i].amount.ToString();
+
+
+                    if (itemList[i].isDurability == true)
+                    {
+                        itemSlotRectTransform.GetChild(2).gameObject.SetActive(true);
+                        //itemSlotRectTransform.GetComponent<enemy_status>().Start();
+                        itemSlotRectTransform.GetComponent<enemy_status>().setHp(itemList[i].durability);
+                    }
+
                 }
             }
+            */
+            Item[] itemList = inventory.GetItemList();
+            for (int i=0; i<inventory.GetCapacity(); i++)
+            {
+                if(itemList[i]==null && )
+            }
+            
         }
         else
         {
